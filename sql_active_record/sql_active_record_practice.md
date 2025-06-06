@@ -1,4 +1,7 @@
 
+### railsconsoleで改行しながら入力する方法
+記述するコードをbeginとendで囲う。
+
 ### Time.new
 🔖[Ruby3.4リファレンスマニュアル](https://docs.ruby-lang.org/ja/latest/method/Time/s/new.html)  
 Time.new(year, mon = nil, day = nil, hour = nil, min = nil, sec = nil, in: nil)  
