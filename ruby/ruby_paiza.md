@@ -1,4 +1,15 @@
+新→旧
+## テンプレ
+# mmdd「」
+[問題ページ]()  
+
 ## Cランク・スキルチェック過去問題セット
+# 0612「野球の審判」
+[問題ページ](https://paiza.jp/works/mondai/c_rank_skillcheck_archive/umpire)  
+やっぱり解答に比べると可読性・メンテナンス性に難あり。  
+- 自コード：putsがif条件ごとに直接呼び出されていて、出力がその場で行われるため、読みやすさが少し損なわれることがある。  
+- 解答例コード：if条件ごとの結果をmsgに格納してから最後にmsgを出力している。条件ごとの処理が分かりやすい。  
+
 # 0610「宝くじ」
 [問題ページ](https://paiza.jp/works/mondai/c_rank_skillcheck_archive/lottery)  
 📝[mapメソッド](../ruby/01_ruby_methods.md#📝mapメソッド)  
