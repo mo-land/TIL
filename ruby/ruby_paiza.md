@@ -7,6 +7,20 @@
 [問題ページ]()
 
 ## C ランク・スキルチェック過去問題セット
+# 0619「みかんの仕分け」
+
+[問題ページ](https://paiza.jp/works/mondai/c_rank_skillcheck_archive/mikan)
+
+**`to_iにはchompも含まれる`**  
+×：gets.chomp.to_i  
+○：gets.to_i  
+
+**`result = map do ~ endはセットで覚える`**  
+```rb
+result = 配列.map do |i| 
+  変換処理 
+end
+```
 
 # 0612「野球の審判」
 
