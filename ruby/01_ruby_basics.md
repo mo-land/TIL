@@ -30,6 +30,24 @@ p  [1, 2, 4, 2.0].count(2) #→ 2（配列に含まれる2の数を数える。2
 p  [1, 2, 4, 2.0].count{|x|x%2==0} #→ 3（配列に含まれる、2で割り切れる要素の数を数える）
 ```
 
+### delete_atメソッド
+配列から、引数に指定したインデックス番号の要素を削除して取り出す。  
+  
+▼例（[Ruby 3.4 リファレンスマニュアル ](https://docs.ruby-lang.org/ja/latest/method/Array/i/delete_at.html)から引用）
+```rb
+array = [0, 1, 2, 3, 4]
+array.delete_at 2
+p array             #=> [0, 1, 3, 4]
+```
+### insertメソッド
+配列の任意の場所に要素を挿入する  
+▼例（[Ruby 3.4 リファレンスマニュアル ](https://docs.ruby-lang.org/ja/latest/method/String/i/insert.html)から引用）
+```rb
+str = "foobaz"
+str.insert(3, "bar")
+p str   # => "foobarbaz"
+```
+
 ## ハッシュ
 ### キーと値の組を追加・削除する
 - ハッシュへのキーと値の追加は `ハッシュ[キー] = 値`
