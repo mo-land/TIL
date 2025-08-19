@@ -49,7 +49,7 @@ w草生やしすぎwに注意w
 
 ## 配列
 ### include?メソッド
-include?メソッドを使う！[参考](https://qiita.com/mr0216/items/e3037408d0676e53481c)  
+指定した要素が、配列中に含まれているかを判定。[参考](https://qiita.com/mr0216/items/e3037408d0676e53481c)  
 ```rb
 animals = ["お犬さま", "ゴリラ殿", "ヌコ様", "亀たそ"]
 result = animals.include?("亀たそ") ? "Yes" : "No"
