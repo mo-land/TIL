@@ -49,6 +49,29 @@ w草生やしすぎwに注意w
 
 
 ## 配列
+### `a|b` → 配列をマージする
+参考：[[Ruby]配列をマージ・結合する](https://qiita.com/kenbu/items/68e230ae6e1f7b80c778)  
+重複は排除する  
+※` a + b`や`a.concat(b)`は、重複排除されない
+```rb
+a = ["札幌", "函館", "旭川"]
+b = ["仙台", "金沢", "札幌"]
+p a|b
+
+# 出力
+["札幌", "函館", "旭川", "仙台", "金沢"]
+```
+
+### lastメソッド
+参考：[Ruby 3.4 リファレンスマニュアル last](https://docs.ruby-lang.org/ja/latest/method/Array/i/last.html)  
+配列の末尾の要素を返します。配列が空のときは nil を返します。
+```rb
+p [0, 1, 2].last   #=> 2
+p [].last          #=> nil
+```
+### `a & b` → 配列a, bで、重複する要素のみを取り出す
+参考：[複数の配列を比較し重複する値を取る](https://qiita.com/tomomomo1217/items/c8a2db5bbcdccdb20690)
+
 ### 範囲.each ～ 配列に要素を追加`** を **`範囲.to_a`** でシンプルに🌟
 ```rb
 # 改善前
