@@ -56,6 +56,28 @@ w草生やしすぎwに注意w
 ```
 
 ## 配列
+### `each + if` +` <<` → `select`メソッド でシンプルに
+```rb
+# リファクタリング前：each + if + << の組み合わせ
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# 偶数だけを新しい配列に集める（古い書き方）
+even_numbers = []
+numbers.each do |number|
+  if number.even?
+    even_numbers << number
+  end
+end
+```
+```rb
+# リファクタリング後：selectメソッドを使用
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# 偶数だけを新しい配列に集める（推奨の書き方）
+even_numbers = numbers.select { |number| number.even? }
+puts "偶数: #{even_numbers}"
+# => [2, 4, 6, 8, 10]
+```
 ### `chars` 
 [参考](https://docs.ruby-lang.org/ja/latest/method/String/i/chars.html)  
 文字列の各文字を文字列の配列で返します。
