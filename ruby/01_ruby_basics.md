@@ -56,6 +56,25 @@ w草生やしすぎwに注意w
 ```
 
 ## 配列
+### each + << → map メソッドでシンプルに
+```rb
+# each + <<
+numbers = [1, 2, 3, 4, 5]
+squared_each = []  # 結果を入れる空配列を用意
+
+numbers.each do |n|
+  squared_each << n * 2
+end
+
+puts "each結果: #{squared_each.inspect}"  # => [2, 4, 6, 8, 10]
+
+
+# map
+numbers = [1, 2, 3, 4, 5]
+squared_map = numbers.map { |n| n * 2 }
+
+puts "map結果: #{squared_map.inspect}"    # => [2, 4, 6, 8, 10]
+```
 ### `each + if` +` <<` → `select`メソッド でシンプルに
 ```rb
 # リファクタリング前：each + if + << の組み合わせ
