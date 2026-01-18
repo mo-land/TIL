@@ -274,6 +274,14 @@ end
 [引用：リファレンスマニュアル](https://docs.ruby-lang.org/ja/2.4.0/method/Hash/i/sort.html)
 ```rb
 h = { "a" => 20, "b" => 30, "c" => 10  }
+# キーでソート
 h.sort                       #=> [["a", 20], ["b", 30], ["c", 10]]
 h.sort {|a,b| a[1]<=>b[1]}   #=> [["c", 10], ["a", 20], ["b", 30]]
+
+# キーでソート → 値のみ表示
+h.sort.map(&:last)  #=> [20, 30, 10]
+
+# 値でソート
+h.sort_by { |name, value| value }
+# => [["c", 10], ["a", 20], ["b", 30]]
 ```
