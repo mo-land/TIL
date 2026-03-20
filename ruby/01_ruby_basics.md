@@ -56,6 +56,25 @@ w草生やしすぎwに注意w
 ```
 
 ## 配列
+### min/maxで 上限/下限制御
+```ruby
+# 例: 上限10、現在7、追加5
+current = 7
+give = 5
+max = 10
+
+# 方法1: if文
+if current + give <= max
+  current += give  # 12
+else
+  current = max    # 10
+end
+
+# 方法2: min（同じ結果）
+current = [current + give, max].min
+# [12, 10].min => 10
+```
+
 ### arr.map(&:last)
 `arr.map(&:last)` = 「2次元配列のそれぞれの行の“いちばん最後”だけ集める」コード！  
 🌟最初だけ取り出すなら、`(&:first)`を使う
