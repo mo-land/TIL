@@ -92,7 +92,22 @@ export default function Board() {
 }
 
 ```
-
-
-
-## 感想
+### インタラクティブなコンポーネントの作成
+#### 理解したこと
+- [インタラクティブとは](https://wa3.i-3-i.info/word13455.html)  
+  → 「双方向」とか「対話式」とかな意味。一方通行ではないよの意。
+- useState
+  - Reactが用意している特別な関数
+  - コンポーネントからuseStateを呼び出すことで「記憶」を行わせることができる
+  - 
+#### 理解できていないこと
+- stateって何やねん
+### React Developer Tools
+#### 理解したこと
+chromeだと、拡張機能のReact DevToolsを追加し、そこで追加される`Components`タブからReactコンポーネントのpropsやstateを確認できる
+### stateのリフトアップ
+#### 理解したこと
+`コンポーネント.slice()`は、元の配列を直接書き換えないためにコピーを作るやつらしい。
+#### 理解できていないこと
+- `const [squares, setSquares] = useState(Array(9).fill("null"));` の意味。  
+  後半は、「9個のマスをnullにする」という意味だと分かったが、前半の`const [squares, setSquares]`がどういうことかわからない。
