@@ -94,6 +94,73 @@ for _ in range(n):  # i を使わないことを明示
 
 </details>
 
+### 📝`while` 文の基本
+ 
+#### 基本構文
+ 
+```python
+count = 1
+while count <= 3:   # 条件がTrue の間ループ
+    print(count)
+    count += 1      # ← 忘れると無限ループ！
+# 1, 2, 3
+```
+ 
+#### for 文との使い分け
+ 
+| | `for` | `while` |
+|---|---|---|
+| 向いているケース | 繰り返し回数が事前に分かる | 条件によって回数が変わる |
+| 例 | リストの全要素を処理 | 特定の条件を満たすまで処理 |
+ 
+#### 無限ループ + `break`（意図的な無限ループ）
+ 
+```python
+count = 0
+while True:         # 常にTrue → 無限ループ
+    count += 1
+    if count > 3:
+        break       # ← ここで抜ける
+    print(count)
+# 1, 2, 3
+```
+ 
+> **`while True:` はbreak を書き忘れるとプログラムが止まらなくなる。終了条件を先に設計しておく。**
+ 
+#### `break` vs `continue`
+ 
+```python
+count = 0
+while count < 5:
+    count += 1
+    if count == 3:
+        continue    # 3だけスキップ、ループは続く
+    print(count)
+# 1, 2, 4, 5
+ 
+# ※ continueより前でカウンタを更新しないと無限ループになる
+```
+ 
+| | 動作 |
+|---|---|
+| `break` | ループを即座に終了 |
+| `continue` | 今回の処理だけスキップして次のループへ |
+ 
+#### 強制終了（無限ループに陥ったとき）
+ 
+```
+Ctrl + C（Windows / Linux）
+Cmd  + C（Mac）
+```
+ 
+#### デバッグの基本
+ 
+```python
+while count > 0:
+    print(f"現在のcount: {count}")  # 変数の変化を追跡
+    count -= 1
+```
+
 ## 🔤文字列操作
 ### 🔤文字列の桁揃えフォーマット `"f{m: >N}"`
 #### f文字列版（モダンな書き方）
@@ -108,7 +175,7 @@ print(f"{m:0>3}")   # "005"
 
 <details><summary>ちょっとレガシーな書き方‥？</summary>
 
-### 文字列の桁揃えフォーマット `"{: >N}".format()`
+### 🔤文字列の桁揃えフォーマット `"{: >N}".format()`
 #### 書式の構造
 
 ```
